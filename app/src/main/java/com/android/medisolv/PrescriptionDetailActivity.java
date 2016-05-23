@@ -6,46 +6,47 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ViewReportsOrScansActivity extends AppCompatActivity implements View.OnClickListener{
+public class PrescriptionDetailActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button back;
     Button home;
-    Button share;
+    Button buy;
     String patient_id="Dummy";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_reports_or_scans);
+        setContentView(R.layout.activity_prescription_detail);
 
-        back = (Button)findViewById(R.id.viewReportBackButton);
+        back = (Button)findViewById(R.id.prescriptionDetailBackButton);
         back.setOnClickListener(this);
 
-        home= (Button)findViewById(R.id.viewReportHomeButton);
+        home= (Button)findViewById(R.id.prescriptionDetailHomeButton);
         home.setOnClickListener(this);
 
-        share = (Button)findViewById(R.id.viewReportShareButton);
-        share.setOnClickListener(this);
+        buy = (Button)findViewById(R.id.prescriptionDetailBuyButton);
+        buy.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         Intent intent;
-        if(view.getId() == R.id.viewReportHomeButton){
+        if(view.getId() == R.id.prescriptionDetailHomeButton){
             System.out.println("View Report Home button clicked");
             intent = new Intent(this,WelcomeActivity.class);
             Bundle bundle = new Bundle();
             bundle.putString("PatientID", patient_id);
             intent.putExtras(bundle);
             startActivity(intent);
-        }else  if(view.getId() == R.id.viewReportShareButton){
-            intent = new Intent(this,ShareReportsOrScansActivity.class);
+        }else  if(view.getId() == R.id.prescriptionDetailBuyButton){
+            intent = new Intent(this,BuyMedicinesActivity.class);
             startActivity(intent);
         }
-        else if(view.getId() == R.id.viewReportBackButton){
+        else if(view.getId() == R.id.prescriptionDetailBackButton){
             System.out.println("View Report Back button clicked");
-            intent = new Intent(this,ReportsOrScansActivity.class);
+            intent = new Intent(this,ViewHistoryActivity.class);
             startActivity(intent);
         }
+
     }
 }

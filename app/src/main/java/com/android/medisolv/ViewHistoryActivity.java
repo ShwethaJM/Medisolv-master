@@ -46,4 +46,9 @@ public class ViewHistoryActivity extends AppCompatActivity implements View.OnCli
         Intent intent = new Intent(this,ReportsOrScansActivity.class);
         startActivity(intent);
     }
+
+    public void openPrescriptionDetailActivity(View view){
+        Intent intent = new Intent(this,PrescriptionDetailActivity.class);
+        startActivity(intent);
+    }
 }

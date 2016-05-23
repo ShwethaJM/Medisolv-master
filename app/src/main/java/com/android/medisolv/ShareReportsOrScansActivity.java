@@ -6,45 +6,35 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ViewReportsOrScansActivity extends AppCompatActivity implements View.OnClickListener{
-
+public class ShareReportsOrScansActivity extends AppCompatActivity implements View.OnClickListener {
     Button back;
     Button home;
-    Button share;
     String patient_id="Dummy";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_reports_or_scans);
+        setContentView(R.layout.activity_share_reports_or_scans);
 
-        back = (Button)findViewById(R.id.viewReportBackButton);
+        back = (Button)findViewById(R.id.shareReportBackButton);
         back.setOnClickListener(this);
 
-        home= (Button)findViewById(R.id.viewReportHomeButton);
+        home= (Button)findViewById(R.id.shareReportHomeButton);
         home.setOnClickListener(this);
-
-        share = (Button)findViewById(R.id.viewReportShareButton);
-        share.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        Intent intent;
-        if(view.getId() == R.id.viewReportHomeButton){
+        if(view.getId() == R.id.shareReportHomeButton){
             System.out.println("View Report Home button clicked");
-            intent = new Intent(this,WelcomeActivity.class);
+            Intent intent = new Intent(this,WelcomeActivity.class);
             Bundle bundle = new Bundle();
             bundle.putString("PatientID", patient_id);
             intent.putExtras(bundle);
             startActivity(intent);
-        }else  if(view.getId() == R.id.viewReportShareButton){
-            intent = new Intent(this,ShareReportsOrScansActivity.class);
-            startActivity(intent);
         }
-        else if(view.getId() == R.id.viewReportBackButton){
+        else if(view.getId() == R.id.shareReportBackButton){
             System.out.println("View Report Back button clicked");
-            intent = new Intent(this,ReportsOrScansActivity.class);
+            Intent intent = new Intent(this,ReportsOrScansActivity.class);
             startActivity(intent);
         }
     }

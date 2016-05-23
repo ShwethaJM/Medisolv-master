@@ -40,7 +40,11 @@
         <activity
             android:name=".ViewReportsOrScansActivity"
             android:label="" />
-        <activity android:name=".ReportsOrScansActivity"></activity>
+        <activity android:name=".ReportsOrScansActivity" />
+        <activity android:name=".ShareReportsOrScansActivity" />
+        <activity android:name=".PriscriptionActivity" />
+        <activity android:name=".PrescriptionDetailActivity" />
+        <activity android:name=".BuyMedicinesActivity"></activity>
     </application>
 
 </manifest>
