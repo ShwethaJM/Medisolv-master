@@ -18,6 +18,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
         mobile = (EditText)findViewById(R.id.mobile_no);
         patientid = (EditText)findViewById(R.id.patientid);
+
+         /*setting the listener when Submit button has clicked*/
         Button submit=(Button)findViewById(R.id.submit);
         submit.setOnClickListener(this);
     }

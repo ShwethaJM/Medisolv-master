@@ -82,4 +82,19 @@
     <string name="vendor2">Vendor 2</string>
     <string name="vendor3">Vendor 3</string>
 
+    <string name="dependents">Dependents</string>
+    <string name="dependent1">Dependent 1</string>
+    <string name="dependent2">Dependent 2</string>
+    <string name="dependent3">Dependent 3</string>
+    <string name="del">Del</string>
+
+    <string name="dependentDetail">Dependent Detail</string>
+    <string name="dependentDetailPatientID">Dependent Patient ID :</string>
+    <string name="dependentDetailPrescriptionHistory">Prescription History</string>
+    <string name="dependentDetailScansOrReports">Scans and Reports</string>
+    <string name="dependentDetailDoctor">Doctors</string>
+    <string name="dependentDetailComments">Comments</string>
+
+    <string name="logout">Logout</string>
+
 </resources>

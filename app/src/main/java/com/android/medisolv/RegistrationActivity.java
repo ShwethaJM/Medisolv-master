@@ -22,10 +22,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class RegistrationActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
-    private int day;
-    private int month;
-    private int year;
-    private Calendar cal;
+
     EditText dob;
     DatePickerDialog fromDatePickerDialog;
     SimpleDateFormat dateFormatter;
@@ -77,6 +74,7 @@ public class RegistrationActivity extends AppCompatActivity implements AdapterVi
         ArrayAdapter regTypeArrayAdapter = ArrayAdapter.createFromResource(this,R.array.regType_array,R.layout.support_simple_spinner_dropdown_item);
         regTypeSpinner.setAdapter(regTypeArrayAdapter);
 
+        /*setting the listener when item selected in all spinners of the page*/
         spinner.setOnItemSelectedListener(this);
         genderSpinner.setOnItemSelectedListener(this);
         regTypeSpinner.setOnItemSelectedListener(this);
@@ -84,6 +82,7 @@ public class RegistrationActivity extends AppCompatActivity implements AdapterVi
 
     }
 
+    /*Method to display selected date from the date picker*/
     private void setDateTimeField()
     {
         dob.setOnClickListener(this);
@@ -136,6 +135,7 @@ public class RegistrationActivity extends AppCompatActivity implements AdapterVi
         Toast.makeText(this, "Please select the Registration type", Toast.LENGTH_LONG).show();
     }
 
+    /*Method to show date picker to select the date*/
     @Override
     public void onClick(View v)
     {
@@ -163,7 +163,7 @@ public class RegistrationActivity extends AppCompatActivity implements AdapterVi
         String spl = specialisation.getText().toString();
         String licenceNo = license.getText().toString();
 
-        /*code to check all mandatory fields are containing vlaues or not and mobile no lenght is 10 or not*/
+        /*code to check all mandatory fields are containing values or not and mobile no length is 10 or not*/
 
         if (fn.equals("") || ln.equals("") || phone.equals("") || birth.equals("")||registrationType.equals("Registration type")) {
 

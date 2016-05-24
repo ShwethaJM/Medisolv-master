@@ -11,6 +11,7 @@ public class ReportsOrScansActivity extends AppCompatActivity implements View.On
     Button view1;
     Button share1;
     Button home;
+    Button back;
     String patient_id="Dummy";
 
     @Override
@@ -18,27 +19,39 @@ public class ReportsOrScansActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reports_or_scans);
 
-        view1 = (Button)findViewById(R.id.viewButton1);
+        /*setting the listener when View button has clicked*/
+        view1 = (Button)findViewById(R.id.dependentViewButton1);
         view1.setOnClickListener(this);
 
-        share1 = (Button)findViewById(R.id.shareButton1) ;
+        /*setting the listener when Share button has clicked*/
+        share1 = (Button)findViewById(R.id.dependentDelButton1) ;
         share1.setOnClickListener(this);
 
-        home= (Button)findViewById(R.id.reportHomeButton);
+        /*setting the listener when Home button has clicked*/
+        home= (Button)findViewById(R.id.dependentHomeButton);
         home.setOnClickListener(this);
+
+        /*setting the listener when Back button has clicked*/
+        back= (Button)findViewById(R.id.dependentBackButton);
+        back.setOnClickListener(this);
     }
 
+    /*Method to Redirect to corresponding page based on which button has clicked in the page*/
     @Override
     public void onClick(View view) {
         Intent intent;
-        if(view.getId() == R.id.viewButton1){
+        /*Redirecting to View ReportsOrScans page when View button has clicked*/
+        if(view.getId() == R.id.dependentViewButton1){
          intent = new Intent(this,ViewReportsOrScansActivity.class);
             startActivity(intent);
-        }else if(view.getId() == R.id.shareButton1){
+        }
+        /*Redirecting to share ReportsOrScans page when Share button has clicked*/
+        else if(view.getId() == R.id.dependentDelButton1){
            intent = new Intent(this,ShareReportsOrScansActivity.class);
             startActivity(intent);
         }
-        else if(view.getId() == R.id.reportHomeButton){
+         /*Redirecting to Home page when Home button has clicked*/
+        else if(view.getId() == R.id.dependentHomeButton){
             System.out.println("Report Home button clicked");
             intent = new Intent(this,WelcomeActivity.class);
             Bundle bundle = new Bundle();
@@ -46,5 +59,11 @@ public class ReportsOrScansActivity extends AppCompatActivity implements View.On
             intent.putExtras(bundle);
             startActivity(intent);
         }
+        /*Redirecting to Back page when Back button has clicked*/
+        else if(view.getId() == R.id.dependentBackButton){
+            intent = new Intent(this,ViewHistoryActivity.class);
+            startActivity(intent);
+        }
+
     }
 }

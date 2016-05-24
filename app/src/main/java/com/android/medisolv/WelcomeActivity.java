@@ -21,22 +21,29 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         patient_id = bundle.getString("PatientID");
         TextView patientID=(TextView)findViewById(R.id.patientid);
         patientID.setText(patient_id.trim());
+
+        /*setting the listener when viewHistory button has clicked*/
         viewhistory=(Button)findViewById(R.id.viewhistory);
         viewhistory.setOnClickListener(this);
 
+        /*setting the listener when viewPrescription button has clicked*/
         viewPrescription=(Button)findViewById(R.id.viewprescription);
         viewPrescription.setOnClickListener(this);
 
     }
 
+    /*Method to Redirect to corresponding page based on which button has clicked in the page*/
     @Override
     public void onClick(View v) {
         Intent intent;
+        /*Redirecting to ViewHistory page when View History button has clicked*/
         if (v.getId() == R.id.viewhistory) {
             intent = new Intent(this, ViewHistoryActivity.class);
             startActivity(intent);
-        } else if (v.getId() == R.id.viewprescription) {
-            intent = new Intent(this, PriscriptionActivity.class);
+        }
+         /*Redirecting to ViewPrescription page when ViewPrescription button has clicked*/
+        else if (v.getId() == R.id.viewprescription) {
+            intent = new Intent(this, PrescriptionDetailActivity.class);
             startActivity(intent);
         }
     }

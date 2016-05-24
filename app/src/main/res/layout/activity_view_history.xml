@@ -138,7 +138,7 @@
         android:text="View Prescription"
         android:id="@+id/viewprescription"
         android:textAllCaps="false"
-        android:onClick="openPrescriptionDetailActivity"/>
+        android:onClick="openPrescriptionActivity"/>
 
     <TextView
         android:layout_width="200dp"

@@ -7,27 +7,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.android.medisolv.ReportsOrScansActivity">
-
+    tools:context="com.android.medisolv.DependentsActivity">
     <android.support.v7.widget.Toolbar
-    android:id="@+id/my_toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
-    android:layout_marginTop="30dp"
-    android:background="@color/colorBackground">
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorBackground">
 
-    <ImageView
-        android:id="@+id/my_toolbarImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/logo_3"/>
-</android.support.v7.widget.Toolbar>
+        <ImageView
+            android:id="@+id/my_toolbarImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_3"/>
+    </android.support.v7.widget.Toolbar>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/reportsScans"
+        android:text="@string/dependents"
         android:id="@+id/dependents"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/abc_input_method_navigation_guard"
@@ -53,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Id from DB "
-        android:id="@+id/reportPatientIdValue"
+        android:id="@+id/dependentsPatientIdValue"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/abc_input_method_navigation_guard"
         android:textSize="20dp"
@@ -90,7 +89,7 @@
         android:layout_width="55dp"
         android:layout_height="wrap_content"
         android:text="@string/next"
-        android:id="@+id/nextButton"
+        android:id="@+id/dependentNextButton"
         android:layout_alignTop="@+id/dependentFirstButton"
         android:layout_centerHorizontal="true"
         android:textAllCaps="false"
@@ -121,7 +120,7 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/report1"
+        android:text="@string/dependent1"
         android:id="@+id/dependent1"
         android:textAllCaps="false"
         android:layout_marginTop="15dp"
@@ -142,7 +141,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/share"
+        android:text="@string/del"
         android:id="@+id/dependentDelButton1"
         android:layout_alignTop="@+id/dependentViewButton1"
         android:layout_toRightOf="@+id/dependentLastButton"
@@ -152,7 +151,7 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/report2"
+        android:text="@string/dependent2"
         android:id="@+id/dependent2"
         android:textAllCaps="false"
         android:layout_marginTop="10dp"
@@ -173,7 +172,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/share"
+        android:text="@string/del"
         android:id="@+id/dependentDelButton2"
         android:layout_alignTop="@+id/dependentViewButton2"
         android:layout_toRightOf="@+id/dependentLastButton"
@@ -183,7 +182,7 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/report3"
+        android:text="@string/dependent3"
         android:id="@+id/dependent3"
         android:textAllCaps="false"
         android:layout_marginTop="10dp"
@@ -204,12 +203,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/share"
+        android:text="@string/del"
         android:id="@+id/dependentDelButton3"
         android:layout_alignTop="@+id/dependentViewButton3"
         android:layout_toRightOf="@+id/dependentLastButton"
         android:layout_toEndOf="@+id/dependentLastButton"
         android:textAllCaps="false"/>
-
-
 </RelativeLayout>

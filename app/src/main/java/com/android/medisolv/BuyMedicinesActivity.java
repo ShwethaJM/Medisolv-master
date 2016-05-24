@@ -18,24 +18,30 @@ public class BuyMedicinesActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy_medicines);
 
+         /*setting the listener when back button has clicked*/
         back = (Button)findViewById(R.id.buyMedicinesBackButton);
         back.setOnClickListener(this);
 
-        home= (Button)findViewById(R.id.buyMedicinesHomeButton);
+         /*setting the listener when Home button has clicked*/
+        home= (Button)findViewById(R.id.dependentDetailHomeButton);
         home.setOnClickListener(this);
     }
 
+    /*Method to Redirect to corresponding page based on which button has clicked in the page*/
     @Override
     public void onClick(View view) {
         Intent intent;
-        if(view.getId() == R.id.buyMedicinesHomeButton){
+        /*Redirecting to Home page when Home button has clicked*/
+        if(view.getId() == R.id.dependentDetailHomeButton){
             System.out.print("");
             intent = new Intent(this,WelcomeActivity.class);
             Bundle bundle = new Bundle();
             bundle.putString("PatientID", patient_id);
             intent.putExtras(bundle);
             startActivity(intent);
-        }else  if(view.getId() == R.id.buyMedicinesBackButton){
+        }
+        /*Redirecting to Back page when Back button has clicked*/
+        else  if(view.getId() == R.id.buyMedicinesBackButton){
             intent = new Intent(this,PrescriptionDetailActivity.class);
             startActivity(intent);
         }

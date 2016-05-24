@@ -13,7 +13,7 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@color/colorBackground">
 
         <ImageView
@@ -171,8 +171,7 @@
         android:id="@+id/dateButton2"
         android:textAllCaps="false"
         android:layout_above="@+id/dateButton3"
-        android:layout_alignRight="@+id/dateButton3"
-        android:layout_alignEnd="@+id/dateButton3" />
+        android:layout_alignRight="@+id/dateButton3" />
 
     <Button
         android:layout_width="125dp"

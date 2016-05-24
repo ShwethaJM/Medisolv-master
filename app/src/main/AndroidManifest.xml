@@ -44,7 +44,11 @@
         <activity android:name=".ShareReportsOrScansActivity" />
         <activity android:name=".PriscriptionActivity" />
         <activity android:name=".PrescriptionDetailActivity" />
-        <activity android:name=".BuyMedicinesActivity"></activity>
+        <activity android:name=".BuyMedicinesActivity" />
+        <activity android:name=".LogoutActivity" />
+        <activity android:name=".DependentRegisterActivity" />
+        <activity android:name=".DependentsActivity" />
+        <activity android:name=".DependentsDetailActivity"></activity>
     </application>
 
 </manifest>
